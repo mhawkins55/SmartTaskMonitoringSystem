@@ -1,0 +1,25 @@
+# Integration Testing for Smart Task Monitoring System
+
+## How to Run Integration Tests
+
+### 1. Set Up Environment
+- Java 11+ installed
+- MySQL Server running
+- Execute `database_setup.sql` before running tests
+
+### 2. Run Integration Tests in IntelliJ/Eclipse
+- Open `IntegrationTestSuite.java`
+- Run as JUnit test.
+
+### 3. Run from Command Line (If using Maven)
+
+mvn verify
+
+### 4. Test Scenarios
+- User authentication and login process
+- Task assignment and retrieval from database
+- Notifications being triggered when tasks are completed
+- Database constraints handling user removal
+
+## Expected Outcome
+- The system should pass all integration test cases.
