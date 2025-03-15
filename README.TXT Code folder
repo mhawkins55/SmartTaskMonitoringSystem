@@ -1,0 +1,37 @@
+# Smart Task Monitoring System
+
+## How to Run the Code
+
+### 1. Install Required Software
+Ensure you have the following installed on your system:
+- Java 11+
+- MySQL Server
+- IntelliJ IDEA or Eclipse (Optional, but recommended)
+- JDBC Connector for MySQL
+
+### 2. Clone the Repository
+Navigate to your desired directory and run:
+
+
+### 3. Set Up the Database
+- Open MySQL and execute the provided `database_setup.sql` script.
+- Update `DatabaseConnection.java` with your MySQL credentials.
+
+### 4. Compile and Run
+For the **CLI version**:
+
+
+For the **GUI version** (if applicable):
+- Open `TaskManagerGUI.java` in your IDE and run it.
+
+---
+
+## Code Structure
+
+
+                         
+---
+
+## Troubleshooting
+- If MySQL throws a foreign key constraint error, ensure that all dependent records are removed before deleting users.
+- Ensure the `database_setup.sql` script is executed before running the application.
