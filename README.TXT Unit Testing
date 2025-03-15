@@ -1,0 +1,34 @@
+# Unit Testing for Smart Task Monitoring System
+
+## How to Run Unit Tests
+
+### 1. Ensure Prerequisites
+- Java 11+ installed
+- JUnit 5 framework configured in your IDE
+- MySQL database running
+
+### 2. Run Tests in IntelliJ/Eclipse
+- Open the project in IntelliJ or Eclipse.
+- Navigate to `test/` directory.
+- Run the test files individually or execute all tests using the IDE’s test runner.
+
+### 3. Run Tests from Command Line
+If using Maven:
+
+
+If using JUnit manually:
+
+javac -cp .:junit-5.7.1.jar test/*.java java -cp .:junit-5.7.1.jar org.junit.runner.JUnitCore test.ClassName
+
+
+
+### Test Cases Included
+- **UserDAOTest.java** (Testing user authentication and registration)
+- **TaskDAOTest.java** (Testing task creation and retrieval)
+- **NotificationDAOTest.java** (Testing notification retrieval and clearing)
+
+---
+
+## Expected Output
+- All test cases should pass with a success message.
+- Any failures should be debugged by checking the stack trace.
