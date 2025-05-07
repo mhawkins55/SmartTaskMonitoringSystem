@@ -21,6 +21,9 @@ public class AdminPortal {
         JButton clearAllTasksButton = new JButton("Clear All Tasks");
         JButton backButton = new JButton("Return to Main Menu");
 
+        StyleManager.styleFrameBackground(frame);
+        StyleManager.styleButtons(removeUserButton, clearTaskButton, clearAllTasksButton, backButton);
+
         frame.add(removeUserButton);
         frame.add(clearTaskButton);
         frame.add(clearAllTasksButton);
@@ -55,27 +58,3 @@ public class AdminPortal {
                 JOptionPane.showMessageDialog(frame, "Failed to remove user.");
             }
         }
-    }
-
-    private void clearTask() {
-        String taskId = JOptionPane.showInputDialog(frame, "Enter Task ID to clear:");
-        if (taskId != null && !taskId.trim().isEmpty()) {
-            if (adminDAO.clearTask(Integer.parseInt(taskId))) {
-                JOptionPane.showMessageDialog(frame, "Task cleared successfully.");
-            } else {
-                JOptionPane.showMessageDialog(frame, "Failed to clear task.");
-            }
-        }
-    }
-
-    private void clearAllTasks() {
-        int confirm = JOptionPane.showConfirmDialog(frame, "Are you sure you want to clear ALL tasks?", "Confirm", JOptionPane.YES_NO_OPTION);
-        if (confirm == JOptionPane.YES_OPTION) {
-            if (adminDAO.clearAllTasks()) {
-                JOptionPane.showMessageDialog(frame, "All tasks cleared successfully.");
-            } else {
-                JOptionPane.showMessageDialog(frame, "Failed to clear all tasks.");
-            }
-        }
-    }
-}
