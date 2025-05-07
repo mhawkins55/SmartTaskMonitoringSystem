@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class TaskManagerGUI {
     private JFrame frame;
     private UserDAO userDAO;
@@ -11,6 +12,10 @@ public class TaskManagerGUI {
     private AdminDAO adminDAO;
 
     public TaskManagerGUI() {
+
+        StyleManager.applyNimbusLookAndFeel();
+
+
         userDAO = new UserDAO();
         taskDAO = new TaskDAO();
         notificationDAO = new NotificationDAO();
@@ -25,9 +30,14 @@ public class TaskManagerGUI {
         JButton loginButton = new JButton("Login");
         JButton exitButton = new JButton("Exit");
 
+        StyleManager.styleFrameBackground(frame);
+        StyleManager.styleButtons(registerButton, loginButton, exitButton);
+
+
         frame.add(registerButton);
         frame.add(loginButton);
         frame.add(exitButton);
+
 
         // Register Button Action
         registerButton.addActionListener(new ActionListener() {
