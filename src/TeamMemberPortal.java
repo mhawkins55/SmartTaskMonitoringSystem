@@ -8,6 +8,8 @@ public class TeamMemberPortal {
     private NotificationDAO notificationDAO;
     private User user;
 
+
+
     public TeamMemberPortal(User user, TaskDAO taskDAO, NotificationDAO notificationDAO) {
         this.user = user;
         this.taskDAO = taskDAO;
@@ -23,6 +25,9 @@ public class TeamMemberPortal {
         JButton viewNotificationsButton = new JButton("View Notifications");
         JButton clearNotificationsButton = new JButton("Clear Notifications"); // ✅ New button
         JButton backButton = new JButton("Return to Main Menu");
+
+        StyleManager.styleFrameBackground(frame);
+        StyleManager.styleButtons(createTaskButton, viewTasksButton, completeTaskButton, viewNotificationsButton, clearNotificationsButton, backButton);
 
         frame.add(createTaskButton);
         frame.add(viewTasksButton);
@@ -103,3 +108,4 @@ public class TeamMemberPortal {
         }
     }
 }
+
