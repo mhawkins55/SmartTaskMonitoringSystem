@@ -24,6 +24,9 @@ public class AssigneePortal {
         JButton clearNotificationsButton = new JButton("Clear Notifications"); // ✅ Added
         JButton backButton = new JButton("Return to Main Menu");
 
+        StyleManager.styleFrameBackground(frame);
+        StyleManager.styleButtons(assignTaskButton, viewNotificationsButton, clearNotificationsButton, backButton);
+
         frame.add(assignTaskButton);
         frame.add(viewNotificationsButton);
         frame.add(clearNotificationsButton); // ✅ Added button
